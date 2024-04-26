@@ -8,6 +8,27 @@
     margin: 10px;
 }
 
+.mainArea {
+    float: left;
+    width: auto;
+    background-color: aliceblue;
+    padding: 15px;
+    margin: auto 10px;
+    text-align: center;
+}
+
+.mainPageTitle {
+    font-size: 6.5vw;
+}
+
+.mainAreaImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+
 
 #sideBar {
     background-color: lightblue;
@@ -17,6 +38,7 @@
     width: 25%;
     float: right;
     border-style: dashed;
+    text-align: center;
 }
 
 #mainNavigation {
@@ -44,9 +66,3 @@
     text-decoration:none;
 }
 
-.gameBox1 {
-    background-color: #EEE5E9;
-    color: black;
-    padding: 10px;
-
-}
