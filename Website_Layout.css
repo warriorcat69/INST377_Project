@@ -1,0 +1,52 @@
+#headerAndFooter {
+    clear:both;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(125, 149, 168);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+}
+
+
+#sideBar {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+    height: 180px;
+    width: 25%;
+    float: right;
+    border-style: dashed;
+}
+
+#mainNavigation {
+    background-color: lightskyblue;
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+    margin: 10px;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+#mainNavigation a:hover {
+    background-color: #5887de;
+    color: white;
+}
+
+#mainNavigation ul a{
+    text-align: center;
+    padding: 20px;
+} 
+
+.navigationLink {
+    color:black;
+    text-decoration:none;
+}
+
+.gameBox1 {
+    background-color: #EEE5E9;
+    color: black;
+    padding: 10px;
+
+}
