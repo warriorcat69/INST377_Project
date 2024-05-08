@@ -15,18 +15,18 @@
     padding: 15px;
     margin: auto 10px;
     text-align: center;
+    align-items: center;
 }
 
 .mainPageTitle {
-    font-size: 6.5vw;
+    font-size: 6.0vw;
+    font-family: 'Times New Roman';
+    line-height: 10px;
+    height: 10px;
 }
 
-.mainAreaImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: auto;
+.mainPageSlider {
+    border: 10px solid #555;
 }
 
 
@@ -35,7 +35,7 @@
     padding: 20px;
     margin: 10px;
     height: 180px;
-    width: 25%;
+    width: 30%;
     float: right;
     border-style: dashed;
     text-align: center;
@@ -66,3 +66,54 @@
     text-decoration:none;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Buttons for Site */
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}

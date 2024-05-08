@@ -3,12 +3,14 @@
 <head>
     <title>Final Project: WIP Title</title>
     <link rel="stylesheet" href="Website_Layout.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js" defer></script>  
+    <script src="JS_Libraries.js" defer></script>  
 </head>
 
 <body>
     <!-- Header and Footer Section -->
     <header id="headerAndFooter">
-        <h1>Title</h1>
+        <h1>Find Your Trip!</h1>
     </header>
 
     <!-- Nav -->
@@ -17,7 +19,7 @@
             <a href="" class="navigationLink">Home</a>
             <a href="" class="navigationLink">About Us</a>
             <a href="" class="navigationLink">How To Use</a>
-            <a href="" class="navigationLink">Search Hotels</a>
+            <a href="" class="navigationLink">Search</a>
         </ul>
     </nav>
 
@@ -25,17 +27,26 @@
     <div class="mainBody">
 
         <!--Title and Intro Image-->
+        <!--JS Library: Picture Slider-->
         <div class="mainArea">
-        <h1 class="mainPageTitle">Welcome to Our Page!</h1>
+            <h1 class="mainPageTitle">Welcome to Our Page!</h1>
 
-        <img src="https://tinyurl.com/yc8558rc" class="mainAreaImage">
+            <div style="width:900px; height:600px" class="mainPageSlider" data-simple-slider>
+            <img src="https://tinyurl.com/yc8558rc"/>
+            <img src="https://tinyurl.com/yc8558rc"/>
+            <img src="https://tinyurl.com/yc8558rc"/>
+            <img src="https://tinyurl.com/yc8558rc"/>
+            <img src="https://tinyurl.com/yc8558rc"/>
+            </div>
 
-        <h2 style="font-size:2vw">Click on our navigation bar or use the buttons below to get started!</h2>
+            <h2 style="font-size:2vw">Click on our navigation bar or use the buttons below to get started!</h2>
 
-        <button>Find Hotels</button>
-        <button>Find Attractions</button>
-        <button>Help</button>
-
+            <!--Buttons-->
+            <div class="buttons">
+            <button class="button-28" role="button">Find Hotels</button>
+            <button class="button-28" role="button">Find Attractions</button>
+            <button class="button-28" role="button">Help</button>
+            </div>
         </div>
 
         <!-- Sidebar -->

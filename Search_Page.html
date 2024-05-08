@@ -1,8 +1,51 @@
 <html>
 
-<head>
-    <title>Final Project: WIP Title</title>
-    <link rel="stylesheet" href="Website_Layout.css">
-</head>
+    <head>
+        <title>Final Project: WIP Title</title>
+        <link rel="stylesheet" href="Website_Layout.css">
+        <script src="Search_Page.js" defer></script>  
+    </head>
+
+    <body>
+        <!-- Header and Footer Section -->
+        <header id="headerAndFooter">
+            <h1>Find Your Trip!</h1>
+        </header>
+
+        <!-- Nav -->
+        <nav id="mainNavigation">
+            <ul>
+                <a href="" class="navigationLink">Home</a>
+                <a href="" class="navigationLink">About Us</a>
+                <a href="" class="navigationLink">How To Use</a>
+                <a href="" class="navigationLink">Search</a>
+            </ul>
+        </nav>
+
+        <!--Search Form-->
+        <form id="searchForm" onsubmit="tripAdvisorSearch(); return false;">
+            <label for="textSearch">Search:</label>
+            <input type="text" id="textSearch" required>
+            <br>
+            <br>
+            <label for="categorySearch">Category:</label>
+            <select id="categorySearch" name="categorySearch" required>
+                <option hidden disabled selected value>-- Select Option --</option>
+                <option value="hotels">Hotel</option>
+                <option value="attractions">Attractions</option>
+                <option value="restaraunts">Restaraunts</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Submit Search" class="button-55">
+        </form>
+
+        <!--Search Results-->
+        <div id="Search Results"></div>
+
+        <footer id="headerAndFooter">
+            <p>Copyright</p>
+        </footer>
+    </body>
 
 </html>
