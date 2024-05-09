@@ -36,6 +36,39 @@ async function geoApifySearchAPI() {
 }
 
 async function geoApifySearch() {
-    searchResults = await geoApifySearchAPI()
+    APISearchResults = await geoApifySearchAPI()
+    console.log(APISearchResults)
+
+    let searchResultsDiv = document.getElementById("searchResults")
+    let searchResults = APISearchResults["features"]
     console.log(searchResults)
+
+    searchResults.forEach(item => {
+        // Creating Elements
+        itemProperties = item["properties"]
+        console.log(itemProperties)
+
+        const div = document.createElement('div');
+        let location_name = document.createElement("h2")
+        let address1 = document.createElement("p")
+        let city = document.createElement("p")
+        let country = document.createElement("p")
+        let region = document.createElement("p")
+
+        // Add Item Contents to Elements
+        location_name.innerHTML = itemProperties.name
+        address1.innerHTML = itemProperties.address_line1
+        city.innerHTML = itemProperties.city
+        country.innerHTML = itemProperties.country
+        region.innerHTML = itemProperties.region
+
+        // Append Elelements
+        div.appendChild(location_name)
+        div.appendChild(address1)
+        div.appendChild(city)
+        div.appendChild(country)
+        div.appendChild(region)
+
+        searchResultsDiv.appendChild(div);
+    })
 }
