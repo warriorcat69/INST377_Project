@@ -1,7 +1,6 @@
 // Trip Advisor Search API 
 
 function addressSearchAPI() {
-    // (11 Av. de la Bourdonnais, 75007 Paris, France):
     
     let street_address = (document.getElementById("addressSearch").value).replaceAll(" ", "%20")
     let zip_code = (document.getElementById("zipcodeSearch").value) 
@@ -12,15 +11,33 @@ function addressSearchAPI() {
 }
 
 let place = ""
+let lat = ""
+let lon = " "
 
 async function locationSearch() {
     locationResults = await addressSearchAPI();
     place = locationResults["results"]["0"].place_id;
+    lat = locationResults["results"]["0"].lat
+    lon = locationResults["results"]["0"].lon
+}
+
+async function createMap() {
+    await locationSearch()
+
+    let map = L.map('map').setView([lat, lon], 13);
+
+    // Create Map
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
 }
 
 async function geoApifySearchAPI() {
 
     await locationSearch()
+    createMap()
 
     if (document.getElementById("categorySearch").value == "restaurant") {
         category = "catering.restaurant"
@@ -37,18 +54,17 @@ async function geoApifySearchAPI() {
 
 async function geoApifySearch() {
     APISearchResults = await geoApifySearchAPI()
-    console.log(APISearchResults)
 
     let searchResultsDiv = document.getElementById("searchResults")
     let searchResults = APISearchResults["features"]
-    console.log(searchResults)
 
     searchResults.forEach(item => {
         // Creating Elements
         itemProperties = item["properties"]
-        console.log(itemProperties)
 
         const div = document.createElement('div');
+        div.setAttribute("class", "searchDiv")
+
         let location_name = document.createElement("h2")
         let address1 = document.createElement("p")
         let city = document.createElement("p")
@@ -57,7 +73,7 @@ async function geoApifySearch() {
 
         // Add Item Contents to Elements
         location_name.innerHTML = itemProperties.name
-        address1.innerHTML = itemProperties.address_line1
+        address1.innerHTML = itemProperties.address_line2
         city.innerHTML = itemProperties.city
         country.innerHTML = itemProperties.country
         region.innerHTML = itemProperties.region
