@@ -51,7 +51,7 @@ async function geoApifySearchAPI() {
         category = "accommodation.hotel"
     }
     
-    return fetch(`https://api.geoapify.com/v2/places?categories=${category}&filter=place:${place}&limit=20&apiKey=bb910db7a03a411682ff24837d460c0b`).then((res) => res.json());
+    return fetch(`https://api.geoapify.com/v2/places?categories=${category}&filter=place:${place}&limit=6&apiKey=bb910db7a03a411682ff24837d460c0b`).then((res) => res.json());
 }
 
 async function geoApifySearch() {
@@ -59,10 +59,6 @@ async function geoApifySearch() {
 
     let searchResultsDiv = document.getElementById("searchResults")
     let searchResults = APISearchResults["features"]
-
-    if (document.body.contains(div)) {
-        document.href.location = document.href.location; 
-    }
 
     searchResults.forEach(item => {
         // Creating Elements
@@ -72,6 +68,7 @@ async function geoApifySearch() {
 
         const div = document.createElement('div');
         div.setAttribute("class", "searchDiv")
+        div.setAttribute("id", "check")
 
         let location_name = document.createElement("h2")
         let underline = document.createElement("hr")
