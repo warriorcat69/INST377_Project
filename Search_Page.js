@@ -70,6 +70,7 @@ async function geoApifySearch() {
         div.setAttribute("class", "searchDiv")
 
         let location_name = document.createElement("h2")
+        let underline = document.createElement("hr")
         let address1 = document.createElement("p")
         let city = document.createElement("p")
         let country = document.createElement("p")
@@ -85,6 +86,7 @@ async function geoApifySearch() {
         // Append Elelements
 
         div.appendChild(location_name)
+        div.appendChild(underline)
         div.appendChild(address1)
         div.appendChild(city)
         div.appendChild(country)
