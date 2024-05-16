@@ -1,3 +1,11 @@
+/*Body*/
+
+#body {
+    background-color: 112233;
+}
+
+/*General*/
+
 #header {
     clear:both;
     text-align: center;
@@ -53,7 +61,7 @@ hr {
     height: 180px;
     width: 32%;
     float: right;
-    border: 5px solid #445566;
+    border: 5px solid #ffffff;
     text-align: center;
     font-family: Cinzel, serif;
 }
@@ -172,7 +180,7 @@ hr {
     text-align: center;
     align-items: center;
     font-family: 'Fauna One', serif;
-    border: 5px dashed #445566;
+    border: 5px dashed white;
 }
 
 .aboutusTitle {
