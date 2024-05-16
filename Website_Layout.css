@@ -1,59 +1,76 @@
-#headerAndFooter {
+#header {
     clear:both;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(125, 149, 168);
-    color: rgb(255, 255, 255);
+    font-size: 1.5vw;
+    font-family: Cinzel, serif;
+    background-color: 112233;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+#footer {
+    clear:both;
+    text-align: center;
+    font-family: Fauna One;
+    background-color: 112233;
+    color: white;
     padding: 10px;
     margin: 10px;
 }
 
 .mainArea {
     float: left;
-    width: auto;
-    background-color: aliceblue;
+    width: 60%;
+    background-color:#aabbcc;
     padding: 15px;
     margin: auto 10px;
     text-align: center;
     align-items: center;
+    font-family: 'Fauna One', serif;
 }
 
 .mainPageTitle {
-    font-size: 6.0vw;
-    font-family: 'Times New Roman';
+    font-size: 4.5vw;
+    font-family: Cinzel, serif;
     line-height: 10px;
     height: 10px;
 }
 
-.mainPageSlider {
-    border: 10px solid #555;
-}
-
+hr {
+    border: none;
+    height: 10px;
+    background-color: #333;
+  }
 
 #sideBar {
-    background-color: lightblue;
+    background: #AABBCC;
+    background: -moz-linear-gradient(top, #AABBCC 0%, #DDEEFF 50%, #aabbcc 100%);
+    background: -webkit-linear-gradient(top, #AABBCC 0%, #DDEEFF 50%, #aabbcc 100%);
+    background: linear-gradient(to bottom, #AABBCC 0%, #DDEEFF 50%, #aabbcc 100%);
     padding: 20px;
     margin: 10px;
     height: 180px;
-    width: 30%;
+    width: 32%;
     float: right;
-    border-style: dashed;
+    border: 5px solid #445566;
     text-align: center;
+    font-family: Cinzel, serif;
 }
 
 #mainNavigation {
-    background-color: lightskyblue;
+    background-color: #445566;
     color: white;
-    text-decoration: none;
     padding: 3px;
     margin: 10px;
     word-spacing: 5px;
     text-align: center;
+    font-family: 'Fauna One', serif;
 }
 
 #mainNavigation a:hover {
-    background-color: #5887de;
-    color: white;
+    background-color: #ddeeff;
+    color: black;
 }
 
 #mainNavigation ul a{
@@ -68,9 +85,8 @@
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    padding: 5px;
 }
-
 
 /* Buttons for Site */
 
@@ -80,10 +96,10 @@
   border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #3B3B3B;
+  color: black;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: 'Fauna One', serif;
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -118,6 +134,8 @@
   transform: translateY(0);
 }
 
+/* Search */
+
 #map { 
     height: 180px;
  }
@@ -134,4 +152,35 @@
     background-color: #d0e0fc;
     text-align: center;
     margin: auto 5px;
+}
+
+/* About Us */
+
+.aboutusArea {
+    float: left;
+    width: 60%;
+    background-color:#aabbcc;
+    padding: 15px;
+    margin: auto 10px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Fauna One', serif;
+    border: 5px dashed #445566;
+}
+
+.aboutusTitle {
+    font-size: 6.0vw;
+    font-family: Cinzel, serif;
+    line-height: 10px;
+    height: 10px;
+}
+
+#aboutusSidebar {
+    background-color: 536878;
+    padding: 20px;
+    margin: 10px;
+    height: auto;
+    width: 32%;
+    float: right;
+    text-align: center;
 }

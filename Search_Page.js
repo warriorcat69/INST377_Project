@@ -19,6 +19,7 @@ async function locationSearch() {
     place = locationResults["results"]["0"].place_id;
     lat = locationResults["results"]["0"].lat
     lon = locationResults["results"]["0"].lon
+    
 }
 
 async function createMap() {
@@ -32,6 +33,7 @@ async function createMap() {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    L.marker([lat, lon]).addTo(map)
 }
 
 async function geoApifySearchAPI() {
@@ -62,6 +64,8 @@ async function geoApifySearch() {
         // Creating Elements
         itemProperties = item["properties"]
 
+        console.log(itemProperties)
+
         const div = document.createElement('div');
         div.setAttribute("class", "searchDiv")
 
@@ -72,19 +76,25 @@ async function geoApifySearch() {
         let region = document.createElement("p")
 
         // Add Item Contents to Elements
-        location_name.innerHTML = itemProperties.name
+        location_name.innerHTML = itemProperties.address_line1
         address1.innerHTML = itemProperties.address_line2
         city.innerHTML = itemProperties.city
         country.innerHTML = itemProperties.country
         region.innerHTML = itemProperties.region
 
         // Append Elelements
+
         div.appendChild(location_name)
         div.appendChild(address1)
         div.appendChild(city)
         div.appendChild(country)
         div.appendChild(region)
 
-        searchResultsDiv.appendChild(div);
-    })
+        searchResultsDiv.appendChild(div)
+    });
+
+    searchResults.forEach(item => {
+        // Add Markers
+        itemProperties = item["properties"]
+    });
 }
