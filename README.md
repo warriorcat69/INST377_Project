@@ -11,7 +11,7 @@ TripSearch is a website focused on searching for places useful for travel, inclu
   
 ### Application Installation
 
-To install the application, you must first have VSCode installed.
+To install the application, you must first
     
 ### Running the Application on a Server
     
@@ -24,3 +24,5 @@ To install the application, you must first have VSCode installed.
 #### POST
 
 ### Known Bugs 
+
+1. It is known that the search results from the API may result in Undefined. This is because a name for the place hasn't been designated in the API
