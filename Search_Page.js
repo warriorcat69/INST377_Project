@@ -60,6 +60,10 @@ async function geoApifySearch() {
     let searchResultsDiv = document.getElementById("searchResults")
     let searchResults = APISearchResults["features"]
 
+    if (document.body.contains(div)) {
+        document.href.location = document.href.location; 
+    }
+
     searchResults.forEach(item => {
         // Creating Elements
         itemProperties = item["properties"]
