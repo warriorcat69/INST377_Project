@@ -100,7 +100,7 @@ hr {
 
 .button-28 {
   appearance: none;
-  background-color: transparent;
+  background-color: white;
   border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
@@ -143,6 +143,17 @@ hr {
 }
 
 /* Search */
+
+#searchForm {
+    color: white;
+    font-family: 'Fauna One', serif;
+    display: inline-block;
+    text-align: left;
+}
+
+#searchFormDiv {
+    text-align: center;
+}
 
 #map { 
     height: 180px;
