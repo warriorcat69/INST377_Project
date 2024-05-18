@@ -24,10 +24,8 @@ async function locationSearch() {
 
 async function createMap() {
     await locationSearch()
-
-    if (document.getElementById("map") !== undefined) {
-        map.off();
-    }
+    
+    map.off();
 
     let map = L.map('map').setView([lat, lon], 13);
 
