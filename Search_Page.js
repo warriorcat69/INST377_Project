@@ -18,13 +18,13 @@ async function locationSearch() {
     locationResults = await addressSearchAPI();
     console.log(locationResults)
 
-    if (locationResults !== undefined) {
-    place = locationResults["results"]["0"].place_id;
-    lat = locationResults["results"]["0"].lat
-    lon = locationResults["results"]["0"].lon
-    } else if (locationResults === undefined) {
-        document.getElementById("searchResults").appendChild("Sorry, no results were found! :(")
-        document.getElementById("searchResults").appendChild("Try fixing your address or putting in a similar one!")
+    if (locationResults["results"]["0"] !== undefined) {
+        place = locationResults["results"]["0"].place_id;
+        lat = locationResults["results"]["0"].lat
+        lon = locationResults["results"]["0"].lon
+    } else if (locationResults["results"]["0"] === undefined) {
+        errortext = "Sorry, no results were found. Try putting in another address."
+        (document.getElementById("searchResults")).innerHTML = errortext
     }
     
 }
