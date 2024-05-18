@@ -16,9 +16,16 @@ let lon = " "
 
 async function locationSearch() {
     locationResults = await addressSearchAPI();
+    console.log(locationResults)
+
+    if (locationResults !== undefined) {
     place = locationResults["results"]["0"].place_id;
     lat = locationResults["results"]["0"].lat
     lon = locationResults["results"]["0"].lon
+    } else {
+        document.getElementById("searchResults").appendChild("Sorry, no results were found! :(")
+        document.getElementById("searchResults").appendChild("Try fixing your address or putting in a similar one!")
+    }
     
 }
 
@@ -182,7 +189,6 @@ async function geoApifyDetailsAttraction(place) {
 async function geoApifyDetailsHotel(place) {
     placeDetails = await geoApifyDetailsAPI(place) 
     let hotelDetails = placeDetails.features[0].properties
-    console.log(hotelDetails)
 
     // Define Items
     let div = document.getElementById(place)
