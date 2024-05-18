@@ -24,10 +24,10 @@ async function locationSearch() {
 
 async function createMap() {
     await locationSearch()
-    
-    map.off();
 
     let map = L.map('map').setView([lat, lon], 13);
+
+    map.off();
 
     // Create Map
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
