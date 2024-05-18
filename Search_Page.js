@@ -24,7 +24,7 @@ async function locationSearch() {
         lon = locationResults["results"]["0"].lon
     } else if (locationResults["results"]["0"] === undefined) {
         errortext = "Sorry, no results were found. Try putting in another address."
-        (document.getElementById("searchResults")).innerHTML = errortext
+        document.getElementById("searchResults").innerHTML = errortext
     }
     
 }
