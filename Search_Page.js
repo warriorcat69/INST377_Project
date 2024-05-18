@@ -16,16 +16,10 @@ let lon = " "
 
 async function locationSearch() {
     locationResults = await addressSearchAPI();
-    console.log(locationResults)
-
-    if (locationResults["results"]["0"] !== undefined) {
-        place = locationResults["results"]["0"].place_id;
-        lat = locationResults["results"]["0"].lat
-        lon = locationResults["results"]["0"].lon
-    } else if (locationResults["results"]["0"] === undefined) {
-        errortext = "Sorry, no results were found. Try putting in another address."
-        document.getElementById("searchResults").innerHTML = errortext
-    }
+    
+    place = locationResults["results"]["0"].place_id;
+    lat = locationResults["results"]["0"].lat
+    lon = locationResults["results"]["0"].lon
     
 }
 
