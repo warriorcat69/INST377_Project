@@ -22,7 +22,7 @@ async function locationSearch() {
     place = locationResults["results"]["0"].place_id;
     lat = locationResults["results"]["0"].lat
     lon = locationResults["results"]["0"].lon
-    } else {
+    } else if (locationResults === undefined) {
         document.getElementById("searchResults").appendChild("Sorry, no results were found! :(")
         document.getElementById("searchResults").appendChild("Try fixing your address or putting in a similar one!")
     }
