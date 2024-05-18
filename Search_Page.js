@@ -25,7 +25,7 @@ async function locationSearch() {
 async function createMap() {
     await locationSearch()
 
-    if (map !== undefined) {
+    if (getElementById("map") !== undefined) {
         map.off();
     }
 
