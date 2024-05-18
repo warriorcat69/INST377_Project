@@ -29,10 +29,10 @@ app.get('/hotel', async (req, res) => {
 app.post('/hotel', async (req, res) => {
     console.log('Adding hotel')
 
-    console.log(req.body)
+    console.log(req.body);
     var hotelName = req.body.hotelName;
     var continentName = req.body.continentName;
-    var cityName = cityName;
+    var cityName = req.body.cityName;
     var countryName = req.body.countryName;
 
     const { data, error } = await supabase
