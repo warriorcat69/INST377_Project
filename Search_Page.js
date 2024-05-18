@@ -25,6 +25,10 @@ async function locationSearch() {
 async function createMap() {
     await locationSearch()
 
+    if (map !== undefined) {
+        map.off();
+    }
+
     let map = L.map('map').setView([lat, lon], 13);
 
     // Create Map
