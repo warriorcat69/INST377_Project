@@ -41,3 +41,4 @@ To install the application, you must first
 
 1. It is known that the search results from the API may result in Undefined. This is because a name for the place hasn't been designated in the API.
 2. Some information is unavailable from the Place Details API from the GeoApify API and so extra information, including if it is unknown, will not appear under some search results.
+3. The table displyed in the app does dynamically update to the supabase database but only displays the first 1000 results in our table even though the order is reversed by id number. 
